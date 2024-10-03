@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/style/admin/editUser.css">
+
+<div class="d-flex justify-content-center h-100 align-items-center" id="outer-background">
+<div class="w-25" id="inner-background">
+    <a href="/admin/home" class="btn text-white px-3 mb-2" style="background-color:rgba(0,98,114,255)"><-</a>
+    <form action="/admin/update-user/<%= user._id %>?_method=PATCH" method="post" id="form">
+        <div class="form-group pb-4">
+          <label for="username" class="text-white">USERNAME</label>
+          <input type="text" class="form-control w-100" id="username" name="username" value="<%=user.username%>" onkeyup="validateUsername()">
+          <div class="text-danger p-0 ms-5" id="usernameError">username is required</div>
+
+        </div>
+        <div class="form-group pb-4">
+          <label for="email" class="text-white">EMAIL</label>
+          <input type="text" class="form-control w-100" id="email" name="email" value="<%=user.email%>" onkeyup="validateEmail()">
+          <div class="text-danger p-0 ms-5" id="emailError">email is required</div>
+
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+        <div class="text-danger p-0 ms-5" id="formError">fill all field</div>
+      </form>
+</div>
+</div>
+
+
+<script src="/js/admin/editUser.js"></script>

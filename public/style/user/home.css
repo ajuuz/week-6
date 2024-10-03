@@ -1,0 +1,19 @@
+.outer-container{
+    background-color: rgba(33,37,41,255);
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    
+}
+.head-container{
+    margin-bottom: 20px;
+}
+
+.topics-container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 5px;
+    color: black;
+}

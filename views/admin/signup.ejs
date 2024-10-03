@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/style/admin/signup.css">
+
+<div class="body">
+    <div class="outer-container">
+    <h1>Admin  SignUP</h1>
+    <h4 class="text-center text-danger"><%= err %></h4>
+    <form action="/admin/signup" method="post" id="form">
+        <div>
+        <label for="">Admin name</label>
+        <input type="text" name="adminname" id="adminname" onkeyup="validateAdminName()">
+        <div class="text-danger p-0 ms-5" id="adminError">Admin name is required</div>
+
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password" id="password" onkeyup="validatePassword()">
+        <div class="text-danger p-0 ms-5" id="passwordError">password is required</div>
+
+    </div>
+    <div>
+        <input type="submit" value="signup" class="signup">
+        <div class="text-danger p-0 ms-5" id="formError">above fields are mandatory</div>
+
+    </div>
+    <span>already have an account ?<a href="/admin/login">Login</a></span>
+    </form>
+</div>
+</div>
+
+<script src="/js/admin/signup.js"></script>

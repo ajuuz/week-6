@@ -1,0 +1,40 @@
+<div>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">EDIT USER</th>
+        <th scope="col">DELETE USER</th>
+        <th scope="col">ADD PENDING TOPICS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% everyUsers.forEach((element, index) => { %>
+        <tr>
+            <td><%= index + 1 %></td>
+            <td><%= element.firstname %></td>
+            <td><%= element.username %></td>
+            <td><%= element.password %></td>
+            <td>
+                <a href="/admin/edit-user/<%= element._id %>">
+                    <button class="btn-primary btn">Edit</button>
+                </a>
+            </td>
+            <td>
+                <form action="/admin/delete-user/<%= element._id %>?_method=DELETE" method="post">
+                    <input type="submit" class="btn-danger btn" value="Delete">
+                </form>
+            </td>
+            <td>
+                <a href="/admin/add-pendingTopics/<%= element._id %>">
+                    <button class="btn-info text-white btn">ADD Topics</button>
+                </a>
+            </td>
+        </tr>
+     <% }); %>
+    </tbody>
+</table>
+</div>

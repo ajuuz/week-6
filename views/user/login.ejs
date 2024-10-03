@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/style/user/login.css">
+
+<div class="body">
+<div class="outer-container">
+    <h1>Login</h1>
+    <h4 class="text-danger text-center"><%= err %></h4>
+    <form action="/user/login" method="post" id="form">
+        <div>
+        <label for="">username</label>
+        <input type="text" name="username" onkeyup="validateUserName()" id="username">
+        <div class="text-danger p-0 ms-5" id="nameError">username is required</div>
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password" onkeyup="validatePassword()" id="password">
+        <div class="text-danger p-0 ms-5" id="passwordError">password is required</div>
+    </div>
+    <div>
+        <input type="submit" value="LogIn" class="login">
+        <div class="text-danger p-0 ms-5" id="formError">please fill all fields</div>
+
+    </div>
+    <span>Dont have an account? <a href="/user/signup">signUp</a></span>
+    </form>
+</div>
+</div>
+
+<script src="/js/user/login.js"></script>

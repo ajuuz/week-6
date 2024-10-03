@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/style/firstpage/firstpage.css">
+<div class="body" id="body">
+<div class="outer-container">
+    <h1>BROTOTYPE</h1>
+    <h3>Brother you never had!</h3>
+<div class="admin-user-outerbox">   
+ <a href="/user" class="admin-user-box" id="user">USER</a>
+ <a href="/admin" class="admin-user-box" id="admin">ADMIN</a>
+</div>   
+</div>
+</div>
+<script>
+    const user= document.getElementById('user');
+    const admin= document.getElementById('admin');
+    const body= document.getElementById('body');
+    user.addEventListener('mouseenter', () => {
+    body.style.background = "url('/images/streetlight-blue.jpg') center center / cover no-repeat";
+    
+});
+
+    user.addEventListener('mouseleave',()=>{
+        
+        body.style.background = "black";
+    })
+    admin.addEventListener('mouseenter', () => {
+    body.style.background = "url('/images/streetlight-yellow.jpg') center center / cover no-repeat";
+    
+});
+
+    admin.addEventListener('mouseleave',()=>{
+        
+        body.style.background = "black";
+    })
+</script>

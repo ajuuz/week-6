@@ -1,0 +1,20 @@
+#inner-background{
+    background-image: url('/images/layout.jpeg');
+    background-size: cover;
+    box-shadow: 0px -100px 100px rgba(0, 0, 0, 0.1),0px 100px 100px rgba(0, 0, 0, 0.1),100px 0px 100px rgba(0, 0, 0, 0.1),-100px 0px 100px rgba(0, 0, 0, 0.1);
+    padding: 100px 40px;
+    transition: box-shadow 0.5s;
+}
+#inner-background:hover{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+   
+}
+#outer-background{
+    background-image: url('/images/layoutmain.jpg');
+    background-size: cover;
+}
+#usernameError,
+#emailError,
+#formError{
+    visibility: hidden;
+}

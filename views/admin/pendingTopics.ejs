@@ -1,0 +1,15 @@
+<div class="bg-dark d-flex justify-content-center h-100 align-items-center">
+    <div class="w-75">
+        <a href="/admin/home" class="btn text-white px-3 mb-2" style="background-color:rgba(0,98,114,255)"><-</a>
+    <div class="w-100">
+        <form action="/admin/add-pendingTopics/<%= userId %>" method="post">
+            <div class="form-group pb-3">
+                <label for="topics" class="text-white">Add the Topics</label>
+                <input type="text" class="form-control w-100" id="topics" name="topic">
+              </div>
+
+            <button type="submit" class="btn btn-outline-success d-block">Submit</button>
+          </form>
+    </div>
+</div>
+</div>
